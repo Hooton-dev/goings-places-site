@@ -1,0 +1,30 @@
+# ═══════════════════════════════════════════
+# GOINGS PLACES — NETLIFY REDIRECTS
+# Maps old sellanyhousefastcolumbus.com URLs
+# to their new equivalents
+# ═══════════════════════════════════════════
+
+# Old REI Blackbook pages → new site
+/fast-cash-offer/         /#offer           301
+/fast-cash-offer          /#offer           301
+/how-it-works/            /#process         301
+/how-it-works             /#process         301
+/contact/                 /contact/         301
+/contact                  /contact/         301
+/reviews/                 /#reviews         301
+/reviews                  /#reviews         301
+/about/                   /#why-dave        301
+/about                    /#why-dave        301
+/about-us/                /#why-dave        301
+
+# Old Goings Places STR pages → new home buying site
+/listings                 /                 301
+/listings/                /                 301
+
+# Pretty URLs (trailing slash enforcement)
+/auburn-al                /auburn-al/       301
+/contact                  /contact/         301
+/blog                     /blog/            301
+
+# SPA fallback — uncomment if using client-side routing
+# /*    /index.html   200

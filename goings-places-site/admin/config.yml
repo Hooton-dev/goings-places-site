@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# NOTE: For Decap CMS to work, you need to:
+# 1. Push this site to a GitHub repository
+# 2. Connect that repo to Netlify (instead of drag-and-drop)
+# 3. Enable Netlify Identity in your Netlify dashboard
+# 4. Enable Git Gateway in Netlify Identity settings
+# 5. Invite yourself as a user via Netlify Identity
+#
+# This gives you a login at yourdomain.com/admin
+# where you can write and publish blog posts visually.
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "blog/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description (for SEO)", name: "description", widget: "string", required: false }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "City/Market", name: "market", widget: "select", options: ["Columbus, GA", "Auburn, AL", "General"], default: "Columbus, GA" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
