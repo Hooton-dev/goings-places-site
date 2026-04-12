@@ -90,6 +90,7 @@
         <a href="#situations" class="nav-link">We Can Help</a>
         <a href="#areas" class="nav-link">Areas</a>
         <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#faq" class="nav-link">FAQ</a>
         <a href="/blog/" class="nav-link">Blog</a>
         <a href="#offer" class="btn-gold navbar__cta">Get My Cash Offer</a>
       </div>
@@ -107,6 +108,7 @@
     <a href="#situations" class="nav-link">We Can Help</a>
     <a href="#areas" class="nav-link">Areas</a>
     <a href="#reviews" class="nav-link">Reviews</a>
+    <a href="#faq" class="nav-link">FAQ</a>
     <a href="/blog/" class="nav-link">Blog</a>
     <a href="#offer" class="btn-gold" style="justify-content:center;margin-top:16px">Get My Cash Offer</a>
   </div>
@@ -479,7 +481,246 @@
       </p>
     </div>
   </section>
+<!--
+  FAQ SECTION for goingsplaceshomebuyers.com
+  ============================================
+  ADDING TO YOUR SITE VIA GITHUB:
+  
+  1. Go to github.com and open your repo
+  2. Click on index.html
+  3. Click the pencil icon (edit) top-right of the file
+  4. Find the section you want the FAQ AFTER 
+     (I'd put it right before the "Free Cash Offer" / #offer section)
+  5. Paste everything between the START/END markers below
+  6. Click "Commit changes" (green button)
+  7. Netlify auto-deploys — your FAQ is live in ~60 seconds
+  
+  Also add "FAQ" to your nav menu in the <nav> section:
+     <a href="#faq">FAQ</a>
+  ============================================
+-->
 
+<!-- ========== START: FAQ SECTION — paste into index.html ========== -->
+
+<style>
+  /* ---------- FAQ Section ---------- */
+  .faq-section {
+    background: #faf7f2;
+    padding: 80px 20px;
+  }
+
+  .faq-section .section-label {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: #b8922f;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .faq-section h2 {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 0 0 50px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.25;
+  }
+
+  .faq-section h2 em {
+    font-style: italic;
+    color: #b8922f;
+  }
+
+  .faq-container {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #e0d9ce;
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid #e0d9ce;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 22px 50px 22px 0;
+    cursor: pointer;
+    position: relative;
+    font-family: inherit;
+    line-height: 1.4;
+    transition: color 0.2s ease;
+  }
+
+  .faq-question:hover {
+    color: #b8922f;
+  }
+
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #b8922f;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item.active .faq-question::after {
+    content: '\2212';
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 0 24px 0;
+  }
+
+  .faq-answer p {
+    color: #4a4540;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .faq-answer p strong {
+    color: #1a1a1a;
+  }
+
+  .faq-cta {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .faq-cta p {
+    color: #4a4540;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .faq-cta a {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #faf7f2;
+    font-weight: 700;
+    padding: 14px 36px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .faq-cta a:hover {
+    background: #333;
+    transform: translateY(-1px);
+  }
+</style>
+
+<section class="faq-section" id="faq">
+  <div class="section-label">Straight Answers</div>
+  <h2>Questions? <em>Dave's Got Answers.</em></h2>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How does the process work?</button>
+      <div class="faq-answer">
+        <p>Call, text, or email Dave. He'll personally come check out the house — you don't even need to be there if you can't make it. Dave makes you an offer. If you accept, we send it to the closing attorney to clear title (usually about 6 days). If any title issues come up, Dave works with the attorneys to solve them. Once title is clear, you pick your closing date. Done.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What condition does the house need to be in?</button>
+      <div class="faq-answer">
+        <p><strong>Any condition. As-is.</strong> Fire damage, water damage, mold, foundation issues, hazmat, tenant damage, hoarder house — it doesn't matter. Dave has seen it all and bought it all. You don't need to clean, repair, or touch a thing.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What situations can you handle?</button>
+      <div class="faq-answer">
+        <p>All of them. Divorce, inheritance, probate, foreclosure, behind on mortgage payments, out-of-town owner, squatters, non-paying tenants, occupied or vacant, tax delinquent, liens, contested titles — Dave and his team have handled every situation and will walk you through yours step by step.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Are there any fees when I sell to Dave?</button>
+      <div class="faq-answer">
+        <p><strong>None. Ever.</strong> No commissions, no closing costs, no hidden charges, no surprises. The offer Dave gives you is what you walk away with.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Why sell to Dave instead of listing with a realtor?</button>
+      <div class="faq-answer">
+        <p>Sometimes a realtor does make sense — and Dave will tell you if that's the case. But if you value closing fast and simple, Dave is your guy. No pre-listing work, no showings, no days on market, no appraisals, no inspections, no banks complicating the process. Just sold.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How is Dave different from other home buyers?</button>
+      <div class="faq-answer">
+        <p><strong>Dave can pay you more — because there's no middleman.</strong> A lot of "home buyers" are actually wholesalers. They get your house under contract and then sell that contract to another buyer for a fee. That fee comes out of your pocket. Dave buys direct, renovates the home himself, and puts it back into the community. You should be getting that money — not a middleman. Be careful of this.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How fast can we close?</button>
+      <div class="faq-answer">
+        <p>Once title is clear — which typically takes about 6 days — you pick the closing date. Most deals close in 14 days or less. But if you need more time, that's fine too. You're in the driver's seat.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do I need to be at the house for Dave to see it?</button>
+      <div class="faq-answer">
+        <p>Nope. Dave will come check out the property whether you're there or not. If you're out of town, dealing with a tenant situation, or just can't make it — no problem. He'll handle it.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="faq-cta">
+    <p>Still have a question? Just ask Dave.</p>
+    <a href="tel:7063650015">(706) 365-0015</a>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.parentElement;
+      var isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function(el) {
+        el.classList.remove('active');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+
+<!-- ========== END: FAQ SECTION ========== -->
   <!-- ═══ OFFER FORM ═══ -->
   <section id="offer" class="section section--navy">
     <div class="container--form" style="position:relative">
